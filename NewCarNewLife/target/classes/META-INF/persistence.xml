@@ -4,6 +4,7 @@
 	<jta-data-source>java:/PostgresDSTF</jta-data-source>
 	<class>pe.edu.upc.Entities.Marca</class>
 	<class>pe.edu.upc.Entities.Modelo</class>
+	<class>pe.edu.upc.Entities.Vehiculo</class>
 	<properties>
 			<property
 				name="javax.persistence.schema-generation.database.action"

@@ -1,5 +1,7 @@
 package pe.edu.upc.Entities;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -58,6 +60,23 @@ public class Modelo {
 
 	public void setMarca(Marca marca) {
 		this.marca = marca;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(Cmodelo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Modelo other = (Modelo) obj;
+		return Cmodelo == other.Cmodelo;
 	}
 	
 	
