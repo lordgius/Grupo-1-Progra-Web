@@ -28,7 +28,7 @@ public class CategoriaController {
 		this.categoria = new Categoria();
 		this.list();
 	}
-//vhjvjkvkjvjkhvkjhvkjhv
+
 	public String newCategoria() {
 		this.setCategoria(new Categoria());
 		return "categoria.xhtml";
@@ -47,52 +47,6 @@ public class CategoriaController {
 	public void list() {
 		listacategorias = cService.list();
 	}
-	
-	public void eliminar(Categoria c) {
-		try {
-			cService.eliminar(c.getCcategoria());
-			list();
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.getMessage();
-		}
-	}
-	
-	public void clean() {
-		this.init();
-	}
-	
-	public void findByName() {
-		try {
-			if(categoria.getNcategoria().isEmpty()) {
-				this.list();
-			}else {
-				listacategorias=this.cService.findByNameCategoria(this.getCategoria());
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.getMessage();
-		}
-	}
-	
-	//modificar
-	
-	public void modificar() {
-		try {
-			cService.modificar(this.categoria);
-			this.list();
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.getMessage();
-		}
-	}
-	
-	public String Modifpre(Categoria cat) {
-		this.setCategoria(cat);
-		return "CategoriaMod.xhtml";
-	}
-	
-	//get y set
 
 	public Categoria getCategoria() {
 		return categoria;

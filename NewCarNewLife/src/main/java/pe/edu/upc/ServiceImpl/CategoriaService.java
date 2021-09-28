@@ -15,36 +15,18 @@ import pe.edu.upc.Service.ICategoriaService;
 public class CategoriaService implements ICategoriaService {
 
 	@Inject
-	private ICategoriaDao cdao;
+	private ICategoriaDao cDao;
 
 	@Override
 	public void insert(Categoria c) {
 		// TODO Auto-generated method stub
-		cdao.insert(c);
+		cDao.insert(c);
 	}
 
 	@Override
 	public List<Categoria> list() {
 		// TODO Auto-generated method stub
-		return cdao.list();
-	}
-
-	@Override
-	public void eliminar(int ccategoria) {
-		// TODO Auto-generated method stub
-		cdao.eliminar(ccategoria);
-	}
-
-	@Override
-	public List<Categoria> findByNameCategoria(Categoria cat) {
-		// TODO Auto-generated method stub
-		return cdao.findByNameCategoria(cat);
-	}
-
-	@Override
-	public void modificar(Categoria cat) {
-		// TODO Auto-generated method stub
-		cdao.modificar(cat);
+		return cDao.list();
 	}
 	
 	

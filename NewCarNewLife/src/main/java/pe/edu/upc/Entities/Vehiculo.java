@@ -27,35 +27,22 @@ public class Vehiculo {
 	private int Qllanta;
 	
 	private Date Dfabricacion;
-	
-	@ManyToOne
-	@JoinColumn(name = "cpropietario", nullable = false)
-	private Propietario propietario;
 
 	public Vehiculo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Vehiculo(int cplaca, Modelo modelo, int qllanta, Date dfabricacion, Propietario propietario) {
+	public Vehiculo(int cplaca, Modelo modelo, int qllanta, Date dfabricacion) {
 		super();
 		Cplaca = cplaca;
 		this.modelo = modelo;
 		Qllanta = qllanta;
 		Dfabricacion = dfabricacion;
-		this.propietario = propietario;
 	}
 
 	public int getCplaca() {
 		return Cplaca;
-	}
-
-	public Propietario getPropietario() {
-		return propietario;
-	}
-
-	public void setPropietario(Propietario propietario) {
-		this.propietario = propietario;
 	}
 
 	public void setCplaca(int cplaca) {

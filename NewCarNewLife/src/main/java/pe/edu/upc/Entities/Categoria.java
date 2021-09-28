@@ -10,19 +10,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "categoria")
+@Table(name = "Categoria")
 public class Categoria {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ccategoria;
-
+	
 	@Column(name = "Ncategoria", length = 100, nullable = false)
 	private String ncategoria;
-
+	
 	@Column(name = "Nglosa", length = 10, nullable = false)
 	private String nglosa;
-
+	
 	@Column(name = "Qvaloracion", length = 10, nullable = false)
 	private int qvaloracion;
 
@@ -87,5 +87,7 @@ public class Categoria {
 		Categoria other = (Categoria) obj;
 		return ccategoria == other.ccategoria;
 	}
+	
+	
 
 }

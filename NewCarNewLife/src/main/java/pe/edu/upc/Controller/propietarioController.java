@@ -30,7 +30,7 @@ public class propietarioController {
 	List<Categoria> listacategorias;
 
 	@PostConstruct
-	public void init() throws Exception {
+	public void init() {
 		this.listapropietarios = new ArrayList<Propietario>();
 		this.listacategorias = new ArrayList<Categoria>();
 		this.propietario = new Propietario();
@@ -48,57 +48,13 @@ public class propietarioController {
 		listacategorias=cService.list();
 	}
 	
-	public void insertPropietario() throws Exception {
+	public void insertPropietario() {
 		prService.insert(propietario);
 		this.listPropietario();
 	}
 	
-	public void listPropietario() throws Exception {
+	public void listPropietario() {
 		listapropietarios= prService.list();
-	}
-	
-	public void eliminar(Propietario pr) {
-		try {
-			prService.eliminar(pr.getCpropietario());
-			listPropietario();
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.getMessage();
-		}
-	}
-	
-	public void clean() throws Exception {
-		this.init();
-	}
-	
-	public void buscarpornombre() {
-		try {
-			if (propietario.getNpropietario().isEmpty()) {
-				this.listPropietario();
-			}else {
-				listapropietarios = this.prService.buscarpornombre(this.getPropietario());
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.getMessage();
-		}
-	}
-	
-	//modificar
-	
-	public void modificar() {
-		try {
-			prService.modificar(this.propietario);
-			this.listPropietario();
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.getMessage();
-		}
-	}
-	
-	public String modifpre(Propietario pr) {
-		this.setPropietario(pr);
-		return "propietarioMod.xhtml";
 	}
 	
 	//set y get
