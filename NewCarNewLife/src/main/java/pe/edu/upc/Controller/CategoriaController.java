@@ -28,7 +28,7 @@ public class CategoriaController {
 		this.categoria = new Categoria();
 		this.list();
 	}
-
+//vhjvjkvkjvjkhvkjhvkjhv
 	public String newCategoria() {
 		this.setCategoria(new Categoria());
 		return "categoria.xhtml";
