@@ -1,5 +1,6 @@
 package pe.edu.upc.Controller;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +14,13 @@ import pe.edu.upc.Service.IEstadoService;
 
 @Named
 @RequestScoped
-public class EstadoController {
+public class EstadoController implements Serializable {
 
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Inject
 	private IEstadoService eService; 
 	
